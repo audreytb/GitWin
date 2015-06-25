@@ -77,11 +77,12 @@
 							    </div>
     							
     							<div class="content"><br>
-									Nombre(s):<input name="username" type="text" class="input username" value="Username" onfocus="this.value=''" /><br>
-									Apellido(s): <input name="lastname" type="text" class="input lastname" value="Lastname" onfocus="this.value=''" /><br>
-									Email:<input name="email" type="text" class="input email" value="email" onfocus="this.value=''" /><br>
-									Dni : <input name="dni" type="text" class="input direccion" value="direccion" onfocus="this.value=''" /><br>
-									Telefono/mobil: <input name="celular" type="text" class="input cel" value="NumTel" onfocus="this.value=''" /><br>
+									Nombre(s):<input name="nombre" type="text" class="input nombre" value="Nombre" onfocus="this.value=''" /><br>
+									Apellido(s): <input name="apellido" type="text" class="input apellido" value="Apellido" onfocus="this.value=''" /><br>
+									Email:<input name="email" type="text" class="input email" value="Email" onfocus="this.value=''" /><br>
+									Dni : <input name="dni" type="text" class="input direccion" value="DNI" onfocus="this.value=''" /><br>
+									Telefono/mobil: <input name="telefono" type="text" class="input cel" value="NumTel" onfocus="this.value=''" /><br>
+									Usuario: <input name="username" type="text" class="input usuario" value="Usuario" onfocus="this.value=''" /><br>
     								Contraseña:<input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" />
     							</div>
     							
