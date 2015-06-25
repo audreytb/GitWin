@@ -1,37 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
     <head>
 		<meta charset="UTF-8" />
        
         <title>RITERSUR</title>
         
         <link rel="stylesheet" type="text/css" href="Ingreso.css" />
-		<script src="js/modernizr.custom.63321.js"></script>
 		<script src="js/jquery.min.js"></script>
 
-		<style>
-			@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
-			body {
-				background: #563c55 url(images/back.jpg) no-repeat center top;
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				background-size: cover;
-			}
-			.container > header h1,
-			.container > header h2 {
-				color: #fff;
-				text-shadow: 0 1px 1px rgba(0,0,0,0.7);
-			}
-		</style>
 		<script>
 			$(document).ready(function(){
     			$("#admin").click(function(){
         			$(".main").slideDown();
     			});
 			});
-</script>
+		</script>
     </head>
     <body>
         <div class="container">

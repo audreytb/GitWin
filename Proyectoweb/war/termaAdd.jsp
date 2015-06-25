@@ -15,20 +15,20 @@
     <script src="js/bgSlider.js" type="text/javascript"></script>
 </head>
 <body>
-	<script>
-        jssor_slider1_starter = function (containerId) {
-            var options = {
-                $DragOrientation: 3,                                
-                $ArrowNavigatorOptions: {                       
-                    $Class: $JssorArrowNavigator$,              
-                    $ChanceToShow: 2,                               
-                    $AutoCenter: 0,                                 
-                    $Steps: 1                                       
-                }
-            };
-
-            var jssor_slider1 = new $JssorSlider$(containerId, options);
-        };
+	
+    <script type="text/javascript">
+		$(window).load(function() {
+			$('.slider')._TMS({
+				duration:1000,
+				easing:'easeOutQuart',
+				preset:'simpleFade',
+				slideshow:10000,
+				banners:'fade',
+				pauseOnHover:true,
+				waitBannerAnimation:false,
+				pagination:'.pags'
+			});
+		});
     </script>
 	<div id="bgSlider"></div>
     
@@ -130,10 +130,18 @@
 			   <option value="2">7/8x5/8</option>
 			 </select>
 	 		<br>
-	 		<a href="">Ver Registro</a><br><br>
-	 		<input type="reset" value="Reestablecer" id="derechaRes"><br>
-	 		<button name="save" value="terma" >Registrar</button>
-	 	
+	 		
+	 		<input type="reset" value="Reestablecer" id="derechaRes">
+	 		<button name="save" value="terma" >Registrar</button><br>
+	 		
+	 			
+				 	
+	 </form><br>
+	 <form action="/termaGet" >
+	 		<button>Ver Registro</button>
+	 </form>
+	 <form action="servicio.jsp">
+	 <button >Atras</button>
 	 </form>
 	 </div>
 	 </div>

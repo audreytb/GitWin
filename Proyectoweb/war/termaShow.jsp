@@ -13,32 +13,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link type="text/css" rel="stylesheet" href="estiloRiegoShow.css"/>
-<meta charset="utf-8">
-   
 <link rel="stylesheet" href="style.css" type="text/css" >
-
-<script src="../js/jssor.js" type="text/javascript" ></script>
-<script src="../js/jssor.slider.js" type="text/javascript" ></script>
 <script src="js/jquery-1.6.3.min.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
 <script src="js/bgSlider.js" type="text/javascript"></script>
 <title>Insert title here</title>
 </head>
 <body>
-	<script>
-        jssor_slider1_starter = function (containerId) {
-            var options = {
-                $DragOrientation: 3,                                
-                $ArrowNavigatorOptions: {                       
-                    $Class: $JssorArrowNavigator$,              
-                    $ChanceToShow: 2,                               
-                    $AutoCenter: 0,                                 
-                    $Steps: 1                                       
-                }
-            };
-
-            var jssor_slider1 = new $JssorSlider$(containerId, options);
-        };
+	
+    <script type="text/javascript">
+		$(window).load(function() {
+			$('.slider')._TMS({
+				duration:100,
+				easing:'easeOutQuart',
+				preset:'simpleFade',
+				slideshow:10000,
+				banners:'fade',
+				pauseOnHover:true,
+				waitBannerAnimation:false,
+				pagination:'.pags'
+			});
+		});
     </script>
 	<div id="bgSlider"></div>
     
@@ -46,8 +41,17 @@
         <!--==============================Encabezado=================================-->
       
         	<div class="Menu-top">
+        		<div class="social">
+					<ul>
+						<li><a href="http://www.facebook.com/" target="_blank" class="icon-facebook">Facebook</a></li>
+						<li><a href="http://www.twitter.com/" target="_blank" class="icon-twitter">Twitter...</a></li>
+						<li><a href="http://www.googleplus.com/" target="_blank" class="icon-googleplus">Google+...</a></li>
+						<li><a href="http://www.pinterest.com/" target="_blank" class="icon-pinterest">Pinterest</a></li>
+						<li><a href="http://gmail.com/" target="_blank" class="icon-mail">....Gmail...</a></li>
+					</ul>
+				</div>
             	<div class="main">
-                	<div class="Relleno">
+            		<div class="Relleno">
                         <h1><a href="index.html">RITERSUR</a></h1>
                         <ul class="pagination">
                             <li class="current"><a href="images/f1.jpg">1</a></li>
@@ -77,6 +81,8 @@
 			
        
         <!--==============================contenido modificable================================-->
+  	 <div class="main-c">
+            <div id="contenido">
   	<% 
 	HttpSession misesion= request.getSession();
 	misesion.getAttribute("tanque");
@@ -92,6 +98,7 @@
 	<div class="Table">
 		<div class="Title"><p>Lista de los Registrados del tanque:<%= tanque %></p></div>
 		<div class="Heading">
+			<div class="Cell"><p>Num</p></div>
 			<div class="Cell"><p>Tanque</p></div>
 			<div class="Cell"><p>Color</p></div>
 			<div class="Cell"><p>Litros</p></div>
@@ -106,6 +113,7 @@
 	<%for (int idx = 0; idx < terma.size(); idx++) {
 		Terma t = (Terma)terma.get(idx);%>
 		<div class="Row">
+			<div class="Cell"><p><%= idx+1 %></p></div>
 			<div class="Cell"><p><%= t.getTanque() %></p></div>
 			<div class="Cell"><p><%= t.getColor() %></p></div>
 			<div class="Cell"><p><%= t.getLts() %></p></div>
@@ -117,6 +125,8 @@
 		</div>
 	<%}%>
 
+	</div>
+	</div>
 	</div>
 	</div>
 </body>

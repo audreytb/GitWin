@@ -187,6 +187,9 @@
     	Añadir producto:
 		<input type="text" id="name">
 		<button id=enviar>buscar</button><br>
+		<form action="servicio.jsp">
+		<button>Atras</button>
+		</form><br>
 		<h3>Productos:</h3>
 		</div>
 	<div id="adex">	

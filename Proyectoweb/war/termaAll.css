@@ -13,7 +13,7 @@ html {
 	width:100%;
 }
 body {
-	font-family:serif , Helvetica, sans-serif;
+	font-family:cursive , Helvetica, sans-serif;
 	font-size:100%;
 	color:#4c4c4c;
 	min-width:980px;
@@ -144,7 +144,7 @@ ol, ul {
     padding: 0;
     position: relative;
     width: 980px;
-    height:550px;
+    height:600px;
 }
 #contenido {
     background: rgba(0, 0, 0, 0) url("../images/content-tail.png") repeat scroll left top;
@@ -152,99 +152,15 @@ ol, ul {
     position: relative;
     width: 100%;
     z-index: 1;
-    height:470px;
+    height:500px;
+    overflow:scroll;
 }
-
-/***********************************************/
-#ContactForm {
-	margin:30px 30px 30px 30px;
-	
-}
-
-#ContactForm span {
-	float:left;
-	width:94px;
-	line-height:24px;
-}
-#ContactForm .wrapper {
-	min-height:30px;
-}
-#ContactForm .textarea_box {
-	min-height:182px;
-	width:100%;
-	overflow:hidden;
-}
-
-#ContactForm a {
-	margin-left:10px;
-	float:right;
-}
-#ContactForm .input {
-	width:282px;
-	border:1px solid #e0f0f4;
-	background:#fff;
-	padding:3px 10px;
-	color:#000;
-	font:13px Arial, Helvetica, sans-serif;
-	height:16px;
-	margin:0;
-}
-#ContactForm textarea {
-	overflow:auto;
-	width:462px;
-	border:1px solid #e0f0f4;
-	background:#fff;
-	padding:3px 10px;
-	color:#000;
-	font:13px Arial, Helvetica, sans-serif;
-	height:164px;
-	margin:0px;
-}
-.button {
-	display:inline-block;
-	border:1px solid #e0f0f4;
-	width:90px;
-	text-align:center;
-	font-size:20px;
-	color:#39baf8;
-	line-height:45px;
-	border-radius:10px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	position:relative;
-	text-decoration:none;
-}
-.button strong {
-	font-weight:normal;
-	border:1px solid #fff;
-	display:block;
-	height:45px;
-	background:url(images/bg_button.gif) top repeat-x #f3fafb;
-	border-radius:10px;
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
-	position:relative;
-} 
-.button:hover {
-	color:#000;
-}
-.col1{
-	margin:20px 20px 20px 70px;
-	background:#DFE8EB;
-	border-radius:15px;
-	height:400px;
-}
-#ContactForm img{
-	float:right;
-	margin: 0px 0px 0px 0px;
-}
-/************************Barra social************************/
+ /************************Barra social************************/
 .social {
 	position: fixed; 
 	left: 0; 
-	top: 200px;
+	top: 200px; 
 	z-index: 2000;
-	font-family:cursive; 
 }
  
 	.social ul {
@@ -269,15 +185,76 @@ ol, ul {
 		transition:all 500ms ease; 
 	}
  
-	.social ul li .icon-facebook {background:#3b5998;} 
+	.social ul li .icon-facebook {background:#3b5998;}
 	.social ul li .icon-twitter {background: #00abf0;}
 	.social ul li .icon-googleplus {background: #d95232;}
 	.social ul li .icon-pinterest {background: #ae181f;}
 	.social ul li .icon-mail {background: #666666;}
  
 	.social ul li a:hover {
-		background: #000;
+		background: #000; 
 		padding: 40px 70px; 
 	}
 
  
+/************************************************************************/
+
+body {
+	background:url(images/f3.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/**********************table**************************************************/
+.navbar{
+	margin-left:10px;
+	margin-top:10px;
+}
+.navbar li{
+	list-style-type: none;
+}
+.cuadro{
+	background:#111; 
+  width:600px;
+  margin:30px auto;
+  border-radius:0.4em;
+  border:1px solid #191919;
+  overflow:hidden;
+  position:relative;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+}
+.Table  {  
+	display: table;
+	margin: 30px auto; 
+}   
+.Title{  
+  display: table-caption;  
+  text-align: center;  
+  font-weight: bold;  
+  font-size: larger;  
+}  
+  
+.Heading{  
+	display: table-row;  
+	font-weight: bold;  
+	text-align: center;  
+}  
+.Row {  
+	display: table-row;  
+}  
+.Cell{   
+  display: table-cell;    
+  border: solid;  
+  border-width: thin;  
+  padding-left: 5px;  
+  padding-right: 5px;  
+}
+/**************************************/
+body {
+background:url(images/f2.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}

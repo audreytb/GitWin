@@ -29,7 +29,7 @@
 						<li><a href="http://www.twitter.com/" target="_blank" class="icon-twitter">Twitter...</a></li>
 						<li><a href="http://www.googleplus.com/" target="_blank" class="icon-googleplus">Google+...</a></li>
 						<li><a href="http://www.pinterest.com/" target="_blank" class="icon-pinterest">Pinterest</a></li>
-						<li><a href="http://gmail.com/" target="_blank"class="icon-mail">....Gmail...</a></li>
+						<li><a href="http://gmail.com/" target="_blank" class="icon-mail">....Gmail...</a></li>
 					</ul>
 				</div>
             	<div class="main">
