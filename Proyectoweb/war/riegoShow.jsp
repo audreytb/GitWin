@@ -48,7 +48,7 @@
         	<div class="Menu-top">
             	<div class="main">
                 	<div class="Relleno">
-                        <h1><a href="index.html">RITERSUR</a></h1>
+                        <h1><a href="index.jsp">RITERSUR</a></h1>
                         <ul class="pagination">
                             <li class="current"><a href="images/f1.jpg">1</a></li>
                             <li><a href="images/f2.jpg">2</a></li>
@@ -63,12 +63,12 @@
                 	<div class="main">
                         
                             <ul class="menu">
-                                <li><a class="active" href="index.jsp">Inicio</a></li>
+                                <li><a href="index.jsp">Inicio</a></li>
                                 <li><a href="login.jsp">LogIn</a></li>
-                                <li><a href="#">Inventario</a></li>
-                                <li><a href="#">Servicios</a></li>
-                                <li><a href="#">Galeria</a></li>
-                                <li class="last"><a href="#">Contactenos</a></li>
+                                <li><a href="inventario.jsp">Inventario</a></li>
+                                <li><a class="active" href="servicio.jsp">Servicios</a></li>
+                                <li><a href="galeria.jsp">Galeria</a></li>
+                                <li class="last"><a href="contactenos.jsp">Contactenos</a></li>
                             </ul>
                         
                     </div>
@@ -77,6 +77,8 @@
 			
        
         <!--==============================contenido modificable================================-->
+  	 <div class="main-c">
+            <div id="contenido">
   	<% 
 	HttpSession misesion= request.getSession();
 	misesion.getAttribute("nombre");
@@ -116,5 +118,6 @@
 
 	</div>
 	</div>
+	</div></div>
 </body>
 </html>

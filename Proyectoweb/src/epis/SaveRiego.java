@@ -61,7 +61,7 @@ public class SaveRiego extends HttpServlet {
 		try{
 			
 			pm.makePersistent(p);
-			resp.getWriter().println("<br>Datos grabados correctamente");
+			
 			//mostrado registro del producto seleccionado
 			
 			String query = " select from " +ProductoRiego.class.getName() +" where nombre == '" +nombre + "'";
