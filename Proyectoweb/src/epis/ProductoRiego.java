@@ -40,13 +40,14 @@ public class ProductoRiego {
 	public String getIdProducto() {
 		return KeyFactory.keyToString(idProducto);
 	}
-
+	
+	/**
 	public void setIdProducto(String idProducto) {
 		Key keyColor = KeyFactory.stringToKey(idProducto);
 		this.idProducto = KeyFactory.createKey(keyColor,
 	    ContratoServlet.class.getSimpleName(), java.util.UUID.randomUUID().toString());
 	}
-
+**/
 	public String getNombre() {
 		return nombre;
 	}
