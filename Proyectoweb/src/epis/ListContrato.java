@@ -41,7 +41,7 @@ import javax.servlet.http.HttpServletResponse;
 					@SuppressWarnings("unchecked")
 					List<ProductoRiego> productoR = (List<ProductoRiego>) q.execute(query);
 					req.setAttribute("productoR", productoR);
-					RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/listpersona03.jsp");
+					RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/listcontrato.jsp");
 					rd.forward(req, resp);
 				
 				}catch(Exception e){
@@ -58,7 +58,7 @@ import javax.servlet.http.HttpServletResponse;
 					@SuppressWarnings("unchecked")
 					List<ProductoRiego> productoR = (List<ProductoRiego>) q.execute();
 					req.setAttribute("productoR", productoR);
-					RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/listpersona03.jsp");
+					RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/listcontrato.jsp");
 					rd.forward(req, resp);
 				}catch(Exception e){
 					System.out.println(e);

@@ -1,5 +1,5 @@
 
-<!--
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -7,7 +7,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="epis.*"%>
 <%@ page import="java.util.List"%>
--->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -29,7 +29,7 @@
 
 <%List<ProductoRiego> productoR = (List<ProductoRiego>)request.getAttribute("productoR");%>
 <%if(productoR.size()>0){ %>
-	<form action="SaveContrato" method="post">
+	<form action="saveContrato" method="post">
 		<fieldset><legend>CONTRATO</legend>
 		<div id="formulario">
 
