@@ -4,17 +4,80 @@
 <html>
 <head>
     <title>Login</title>
-    <meta charset="utf-8">
-   
     <link rel="stylesheet" href="login.css" type="text/css" >
-   
-     
-    <script src="js/jquery-1.6.3.min.js" type="text/javascript"></script>
-	<script src="js/script.js" type="text/javascript"></script>
-    <script src="js/bgSlider.js" type="text/javascript"></script>
- 
-<!--Slider-in icons-->
-
+	<script src="js/jquery-1.11.3.js" type="text/javascript" ></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#boton').click(function() {
+	    		
+	    	    var regex = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
+	    	    var dnier =/^\d{8}$/;
+	    	    var nomer=/^[a-zA-Z_áéíóú\s]*$/;
+				var i=0;
+				
+	    		///Nombre Validacion
+	    		
+			   if($('#name').val().length==0){
+	        		alert('Tiene que escribir un nombre.');
+				}else{ i++;}
+			   if(!(nomer.test($('#name').val().trim()))) {
+				   alert("Su nombre solo debe contener letras A-Z");
+				}else{i++;}
+			   
+			 	///Apellido Validacion
+			 	
+			   if($('#apellido').val().length==0){
+	        		alert('Tiene que escribir su apellido.');
+				}else{ i++;}
+			   if(!(nomer.test($('#apellido').val().trim()))) {
+				   alert("Su apellido solo debe contener letras A-Z");
+				}else{i++;}
+			   
+			 	///email Validacion
+			 	
+			   if($('#email').val().length==0){
+	        		alert('Tiene que escribir un email.');
+				}else{ i++;}
+			   if(!(regex.test($('#email').val().trim()))) {
+				   alert('La direccion de correo no es valida');
+	        	}else{i++;}
+			   
+			 	///Dni Validacion
+			 	
+			   if($('#dni').val().length==0){
+	        		alert('Debe ingresar su dni.');
+				}else{ i++;}
+			   if((nomer.test($('#dni').val().trim()))) {
+				   alert("Su dni no debe contener letras.");
+				}else{i++;}
+	        	 if(!(dnier.test($('#dni').val().trim()))) {
+					   alert("El dni debe tener 8 digitos");
+				}else{i++;}
+	        	 
+	        	///Telefono Validacion
+	        	
+			   if($('#tel').val().length==0){
+	        		alert('Debe ingresar su telefono.');
+				}else{ i++;}
+			   if((nomer.test($('#tel').val().trim()))) {
+				   alert("Su telefono no debe contener letras.");
+	        	}else{i++;}
+	        	
+	        	///Contraseña Validacion
+	        	
+			   if($('#contraseña').val().length==0){
+	        		alert('Tiene que escribir su contraseña.');
+				}else{ i++;}
+	        	
+			   if (i==12){
+			 	$('.button').show();
+            	$('#boton').hide();
+			   }    
+	    	});
+		});
+	
+	
+	</script>
 </head>
 <body >
 	<div id="bgSlider"></div>
@@ -36,9 +99,9 @@
                 	<div class="Relleno">
                         <h1><a href="index.jsp">RITERSUR</a></h1>
                         <ul class="pagination">
-                            <li class="current"><a href="images/f1.jpg">1</a></li>
-                            <li><a href="images/f2.jpg">2</a></li>
-                            <li><a href="images/f3.jpg">3</a></li>
+                            <li class="current"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
                         </ul>
                         <strong class="top-text">Background:</strong>
                     </div>
@@ -77,20 +140,20 @@
 							    </div>
     							
     							<div class="content"><br>
-									Nombre(s):<input name="nombre" type="text" class="input nombre" value="Nombre" onfocus="this.value=''" /><br>
-									Apellido(s): <input name="apellido" type="text" class="input apellido" value="Apellido" onfocus="this.value=''" /><br>
-									Email:<input name="email" type="text" class="input email" value="Email" onfocus="this.value=''" /><br>
-									Dni : <input name="dni" type="text" class="input direccion" value="DNI" onfocus="this.value=''" /><br>
-									Telefono/mobil: <input name="telefono" type="text" class="input cel" value="NumTel" onfocus="this.value=''" /><br>
-									Usuario: <input name="username" type="text" class="input usuario" value="Usuario" onfocus="this.value=''" /><br>
-    								Contraseña:<input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" />
+									Nombre(s):<input name="username" id="name" type="text" class="input username"  /><br>
+									Apellido(s): <input name="lastname" id="apellido" type="text" class="input lastname"  /><br>
+									Email:<input name="email" type="text" id="email" class="input email" /><br>
+									Dni : <input name="dni" type="text" id="dni" class="input direccion"  /><br>
+									Telefono/mobil: <input name="celular" type="text" id="tel" class="input cel"  /><br>
+    								Contraseña:<input name="password" type="password" id="contraseña" class="input password" />
     							</div>
     							
 								
     							<div class="pie">
-    								<input type="submit" name="submit" value="Registrar" class="button" />
+    								<input style="display:none" type="submit" name="submit" value="Registrar" class="button" />
     							</div>
 							</form>
+							<input type="submit" name="submit" value="Validar" id="boton"/>
 						</div>
 					</div>
             	<!--=============== Ingreso ====================-->
@@ -119,19 +182,6 @@
             	</div>    
       	</div>
     </div>
-    <script type="text/javascript">
-		$(window).load(function() {
-			$('.slider')._TMS({
-				duration:1000,
-				easing:'easeOutQuart',
-				preset:'simpleFade',
-				slideshow:10000,
-				banners:'fade',
-				pauseOnHover:true,
-				waitBannerAnimation:false,
-				pagination:'.pags'
-			});
-		});
-    </script>
+  
 </body>
 </html>

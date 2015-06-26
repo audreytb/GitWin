@@ -398,4 +398,12 @@ FOOTER
 		padding: 40px 70px; 
 	}
 
+ body {
+	background:url(images/f3.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
  
+
