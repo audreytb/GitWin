@@ -44,7 +44,7 @@ public class ProductoRiego {
 	public void setIdProducto(String idProducto) {
 		Key keyColor = KeyFactory.stringToKey(idProducto);
 		this.idProducto = KeyFactory.createKey(keyColor,
-		ContratoServlet.class.getSimpleName(), java.util.UUID.randomUUID().toString());
+	    ContratoServlet.class.getSimpleName(), java.util.UUID.randomUUID().toString());
 	}
 
 	public String getNombre() {
