@@ -63,13 +63,19 @@
 				   alert("Su telefono no debe contener letras.");
 	        	}else{i++;}
 	        	
-	        	///Contraseña Validacion
+	        	///Contraseña Usuario
+	        	
+			   if($('#usuario').val().length==0){
+	        		alert('Tiene que escribir un usuario.');
+				}else{ i++;}
+	        	
+			 ///Contraseña Validacion
 	        	
 			   if($('#contraseña').val().length==0){
 	        		alert('Tiene que escribir su contraseña.');
 				}else{ i++;}
 	        	
-			   if (i==12){
+			   if (i==13){
 			 	$('.button').show();
             	$('#boton').hide();
 			   }    
@@ -140,11 +146,12 @@
 							    </div>
     							
     							<div class="content"><br>
-									Nombre(s):<input name="username" id="name" type="text" class="input username"  /><br>
-									Apellido(s): <input name="lastname" id="apellido" type="text" class="input lastname"  /><br>
+									Nombre(s):<input name="nombre" id="name" type="text" class="input username"  /><br>
+									Apellido(s): <input name="apellido" id="apellido" type="text" class="input lastname"  /><br>
 									Email:<input name="email" type="text" id="email" class="input email" /><br>
 									Dni : <input name="dni" type="text" id="dni" class="input direccion"  /><br>
-									Telefono/mobil: <input name="celular" type="text" id="tel" class="input cel"  /><br>
+									Telefono/mobil: <input name="telefono" type="text" id="tel" class="input cel"  /><br>
+									Usuario: <input name="username" type="text" id="usuario" class="input cel" /><br>
     								Contraseña:<input name="password" type="password" id="contraseña" class="input password" />
     							</div>
     							
