@@ -100,32 +100,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/removeTerma</url-pattern>
 	</servlet-mapping>
 	
-	<servlet>
-		<servlet-name>ContratoServlet</servlet-name>
-		<servlet-class>epis.ContratoServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ContratoServlet</servlet-name>
-		<url-pattern>/contratoServlet</url-pattern>
-	</servlet-mapping>
 	
-	<servlet>
-		<servlet-name>SaveContrato</servlet-name>
-		<servlet-class>epis.SaveContrato</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>SaveContrato</servlet-name>
-		<url-pattern>/saveContrato</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>ListContrato</servlet-name>
-		<servlet-class>epis.ListContrato</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ListContrato</servlet-name>
-		<url-pattern>/listContrato</url-pattern>
-	</servlet-mapping>
 	
 	
 	
