@@ -1,17 +1,19 @@
 package epis;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.KeyFactory;
 
-@PersistenceCapable
+@PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class ProductoRiego {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private Key key;
+	private Key idProducto;
 	
 	@Persistent
 	private String nombre;
@@ -26,6 +28,7 @@ public class ProductoRiego {
 	@Persistent
 	private String material;
 	public ProductoRiego(String nombre, int cantidad,String tipo,String medida,String espesor,String material){
+		super();
 		this.nombre = nombre;
 		this.cantidad = cantidad;
 		this.tipo = tipo;
@@ -34,12 +37,16 @@ public class ProductoRiego {
 		this.material = material;
 		
 	}
-	public Key getKey() {
-		return key;
+	public String getIdProducto() {
+		return KeyFactory.keyToString(idProducto);
 	}
-	public void setKey(Key key) {
-		this.key = key;
+
+	public void setIdProducto(String idProducto) {
+		Key keyColor = KeyFactory.stringToKey(idProducto);
+		this.idProducto = KeyFactory.createKey(keyColor,
+		ContratoServlet.class.getSimpleName(), java.util.UUID.randomUUID().toString());
 	}
+
 	public String getNombre() {
 		return nombre;
 	}
