@@ -21,10 +21,10 @@ import javax.servlet.http.HttpServletResponse;
 			final PersistenceManager pm = PMF.get().getPersistenceManager();
 			final Query q = pm.newQuery(ProductoRiego.class);
 			
-			q.setOrdering("name ascending");
+			//q.setOrdering("name ascending");
 			//q.setRange(0, 10);
 			try{
-				@SuppressWarnings("unchecked")
+			
 				List<ProductoRiego> productoR = (List<ProductoRiego>) q.execute();
 				req.setAttribute("productoR", productoR);
 				RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/contrato.jsp");

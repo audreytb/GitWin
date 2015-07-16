@@ -189,7 +189,9 @@
 		<button id=enviar>buscar</button><br>
 		<form action="servicio.jsp">
 		<button>Atras</button>
-		</form><br>
+		</form>
+		<a href="/contratoServlet">Haga clic aquí para regresar a contrato.</a>
+		<br>
 		<h3>Productos:</h3>
 		</div>
 	<div id="adex">	

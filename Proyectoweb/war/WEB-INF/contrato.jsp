@@ -1,14 +1,6 @@
-
-
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="epis.*"%>
 <%@ page import="java.util.List"%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 <head>
@@ -38,8 +30,7 @@
 				<div class="control"><input type="text" name="name" maxlength="10" value="Pedro"/></div>
 				<div class="etiqueta"><label for="dni">DNI</label></div>
 				<div class="control"><input type="text" name="dni" maxlength="10" value="Pedro"/></div>
-				<div class="etiqueta"><label for="esposo">Esposo(a)</label></div>
-				<div class="control"><input type="text" name="esposo" maxlength="10" value="Lopez"/></div>
+				
 				<div class="etiqueta"><label for="domicilio">Domicilio</label></div>
 				<div class="control"><input type="text" name="domicilio" value="Calle Lima 125"/></div>
 			</fieldset>
@@ -70,44 +61,29 @@
 					<div class="etiqueta"><label for="color">Productos Disponibles: </label></div>
 					<div class="control">
 				 			<%for( ProductoRiego p : productoR ) {%>
-								<%="<input type=\"checkbox\" name=\"productoRiego\" value=\""+p.getNombre()+"\"><br />"%>
+								<%="<input type=\"checkbox\" name=\"productoRiego\" value=\""+p.getNombre()+"\">"+p.getNombre()+"<br />"%>
 							<%}%>
 					</div>
 				</div>
+
 				</fieldset>
 				<fieldset><legend>Estructura Metálica</legend>
 				</fieldset>
 			</fieldset>
-			<fieldset><legend>Modo de Pago</legend>
-				<label>Precio Pactado</label>
-				<input type="text">
-				<label>Fecha de Pago Contado</label>
-				<input type="text">
-				<label>Fecha de Pago Inicial</label>
-				<input type="text">
-				<label>Fecha de Pagos Cuotas</label>
-				<input type="text">
-				<label>Adicional</label>
-				<input type="text">
-			</fieldset>
-			<fieldset><legend>Fecha de Instalación</legend>
-				<label>Fecha de Instalación</label>
-				<input type="text">
-				<label>Garantia</label>
-				<input type="text">
-				<label>Fecha de Firma de Contrato</label>
-				<input type="text">
-			</fieldset>
+			
 			
 			<div class="fila">
-				<div id="action"><input type="reset" value="Limpiar"/><input type="submit" value="Enviar"/></div>
+				<div id="action">
+					<input type="reset" value="Limpiar"/>
+					<input type="submit" value="Enviar"/>	
+				</div>
 			</div>
 		</fieldset>
 		</div>
 	</form>
 
 <%}else{%>
-	<p>No hay colores todavia.<a href="/riegoAdd.jsp">Haga clic aquí para Agregar colores.</a>
+	<p>No hay productos todavia.<a href="/riegoAdd.jsp">Haga clic aquí para Agregar productos.</a>
 <%}%>
 </body>
 </html>

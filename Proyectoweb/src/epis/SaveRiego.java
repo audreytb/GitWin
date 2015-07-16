@@ -83,7 +83,7 @@ public class SaveRiego extends HttpServlet {
 		}catch(Exception e){
 			System.out.println("No grabe");
 			System.out.println(e);
-			resp.getWriter().println("Ocurrió un error, <a href='registro.jsp'>vuelva a intentarlo</a>");
+			resp.getWriter().println("Ocurrió un error, <a href='riegoAdd.jsp'>vuelva a intentarlo</a>");
 		}finally{
 			pm.close();
 			out.close();

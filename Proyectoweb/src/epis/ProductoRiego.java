@@ -1,18 +1,18 @@
 package epis;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+import javax.jdo.annotations.IdentityType;
 
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
-@PersistenceCapable(identityType = IdentityType.APPLICATION)
+@PersistenceCapable//(identityType = IdentityType.APPLICATION)
 public class ProductoRiego {
 	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Persistent//(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Key idProducto;
 	
 	@Persistent
@@ -40,12 +40,11 @@ public class ProductoRiego {
 	public String getIdProducto() {
 		return KeyFactory.keyToString(idProducto);
 	}
-	
-	
+
 	public void setIdProducto(String idProducto) {
 		Key keyColor = KeyFactory.stringToKey(idProducto);
 		this.idProducto = KeyFactory.createKey(keyColor,
-	    Contrato.class.getSimpleName(), java.util.UUID.randomUUID().toString());
+		Contrato.class.getSimpleName(), java.util.UUID.randomUUID().toString());
 	}
 
 	public String getNombre() {

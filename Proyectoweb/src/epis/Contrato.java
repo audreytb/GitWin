@@ -16,11 +16,11 @@ import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.datanucleus.annotations.Unowned;
 
-@PersistenceCapable(identityType = IdentityType.APPLICATION)
+@PersistenceCapable//(identityType = IdentityType.APPLICATION)
 public class Contrato {
 	
 	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Persistent//(identityType = IdentityType.APPLICATION)
 	private Key idContrato;
 	
 	@Persistent
@@ -45,11 +45,11 @@ public class Contrato {
 		//this.color = color;
 	}
 	
-	public String getIdPersona() {
+	public String getIdContrato() {
 		return KeyFactory.keyToString(idContrato);
 	}
 
-	public void setIdPersona(String idContrato) {
+	public void setIdContrato(String idContrato) {
 		Key keyPersona = KeyFactory.stringToKey(idContrato);
 		this.idContrato = KeyFactory.createKey(keyPersona,
 		Contrato.class.getSimpleName(), java.util.UUID.randomUUID().toString());
