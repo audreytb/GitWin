@@ -185,7 +185,48 @@
     <div id="contenido">
     	<div id="texto">
     	Añadir producto:
-		<input type="text" id="name">
+		<input list="productosLista" type="text" id="name">
+		<datalist id="productosLista">
+  		<option value="Adex">
+  		<option value="Aspersores">
+  		<option value="Basurero">
+  		<option value="Bomba de Agua">
+ 		 <option value="Bridas">
+ 		 <option value="Cinta">
+ 		 <option value="Codos">
+ 		 <option value="Collarines">
+ 		 <option value="Conector">
+ 		 <option value="Curvas">
+ 		 <option value="Elevadores">
+ 		 <option value="Enlaces">
+ 		 <option value="Equipo de Filtrado">
+ 		 <option value="Estacas">
+ 		 <option value="Filtros de Malla">
+ 		 <option value="Grabas">
+ 		 <option value="Llaves">
+ 		 <option value="Lubricante">
+ 		 <option value="Manguera">
+ 		 <option value="Manifol">
+ 		 <option value="Monometro">
+ 		 <option value="Niples">
+ 		 <option value="Palanca">
+ 		 <option value="Pegamento">
+ 		 <option value="Punto de Presion">
+ 		 <option value="Reduccion">
+ 		 <option value="Sacos">
+ 		 <option value="Tanque de Graba">
+ 		 <option value="Tapones">
+ 		 <option value="Tapa">
+ 		 <option value="Tee">
+ 		 <option value="Toberas">
+ 		 <option value="Tubos">
+ 		 <option value="Union Universal">
+ 		 <option value="UPR">
+ 		 <option value="Valvula">
+ 		 <option value="Ventura Accesorios">
+ 		 
+		</datalist>
+		
 		<button id=enviar>buscar</button><br>
 		<form action="servicio.jsp">
 		<button>Atras</button>
@@ -194,6 +235,7 @@
 		<br>
 		<h3>Productos:</h3>
 		</div>
+		
 	<div id="adex">	
 	<form action="/saveRiego">
 		<fieldset>	
